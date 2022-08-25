@@ -138,16 +138,6 @@ copy running-config startup-config
 
 ## Configuracion de los Etherswitch VTP
 
-## ESW8
-```sh
-Conf t
-Vtp domain Grupo3
-Vtp password Grupo3
-Vtp mode client
-Do wri
-End
-copy running-config startup-config
-```
 
 ## ESW1
 ```sh
