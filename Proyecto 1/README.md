@@ -384,7 +384,7 @@ copy running-config startup-config
 conf t 
 Int f1/0
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 copy running-config startup-config
@@ -396,21 +396,21 @@ copy running-config startup-config
 conf t 
 Int f1/0
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 
 conf t 
 Int f1/2
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 
 conf t 
 Int f1/1
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 copy running-config startup-config
@@ -422,14 +422,14 @@ copy running-config startup-config
 conf t 
 Int f1/1
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 
 conf t 
 Int f1/3
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 copy running-config startup-config
@@ -441,14 +441,14 @@ copy running-config startup-config
 conf t 
 Int f1/2
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 
 conf t 
 Int f1/3
 Switchport mode trunk
-Switchport trunk allowed vlan 1,1002-1005
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 Do wri
 End
 copy running-config startup-config
