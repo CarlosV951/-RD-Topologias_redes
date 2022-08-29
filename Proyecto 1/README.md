@@ -135,6 +135,52 @@ Do wri
 End
 copy running-config startup-config
 ```
+## Configuracion de modo access
+
+##ESW2
+Conf t
+Int fa1/2
+Switchport mode Access
+Switchport Access vlan 10
+Do wri
+End
+
+Conf t
+Int fa1/3
+Switchport mode Access
+Switchport Access vlan 10
+Do wri
+End
+
+Conf t
+Int fa1/4
+Switchport mode Access
+Switchport Access vlan 30
+Do wri
+End
+
+
+##ESW3
+Conf t
+Int fa1/2
+Switchport mode Access
+Switchport Access vlan 30
+Do wri
+End
+
+Conf t
+Int fa1/3
+Switchport mode Access
+Switchport Access vlan 40
+Do wri
+End
+
+Conf t
+Int fa1/4
+Switchport mode Access
+Switchport Access vlan 20
+Do wri
+End
 
 ## Configuracion de los Etherswitch VTP
 
