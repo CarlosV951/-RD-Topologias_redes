@@ -1,0 +1,45 @@
+Aug 28 02:40:22.969 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Aug 28 02:40:22.969 HYPERVISOR: Started on IP = localhost, TCP port = 36429.
+Aug 28 02:40:22.980 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 28 02:40:22.981 HYPERVISOR: exec_cmd: hypervisor working_dir /home/daniel/SegundoSemestre2022/Redes1/Proyecto1/Redes/Proyecto 1/Topologia_2/Topo2_Ok/project-files/dynamips 
+Aug 28 02:40:22.981 GENERAL: working_dir=/home/daniel/SegundoSemestre2022/Redes1/Proyecto1/Redes/Proyecto 1/Topologia_2/Topo2_Ok/project-files/dynamips
+Aug 28 02:40:22.983 HYPERVISOR: exec_cmd: hypervisor working_dir /home/daniel/SegundoSemestre2022/Redes1/Proyecto1/Redes/Proyecto 1/Topologia_2/Topo2_Ok/project-files/dynamips/2783f94d-1cb2-4cc4-b674-58d5dbd95c56 
+Aug 28 02:40:22.983 GENERAL: working_dir=/home/daniel/SegundoSemestre2022/Redes1/Proyecto1/Redes/Proyecto 1/Topologia_2/Topo2_Ok/project-files/dynamips/2783f94d-1cb2-4cc4-b674-58d5dbd95c56
+Aug 28 02:40:22.984 HYPERVISOR: exec_cmd: vm create ESW5 2 c3725 
+Aug 28 02:40:22.984 VM: VM ESW5 created.
+Aug 28 02:40:22.985 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW5 5011 
+Aug 28 02:40:22.986 HYPERVISOR: exec_cmd: c3725 get_mac_addr ESW5 
+Aug 28 02:40:22.987 HYPERVISOR: exec_cmd: vm set_disk0 ESW5 1 
+Aug 28 02:40:22.988 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:40:22.989 HYPERVISOR: exec_cmd: vm set_idle_pc ESW5 0x60bf8ba0 
+Aug 28 02:40:22.991 HYPERVISOR: exec_cmd: vm set_ios ESW5 /home/daniel/GNS3/images/IOS/c3725-adventerprisek9-mz124-15.image 
+Aug 28 02:40:22.993 HYPERVISOR: exec_cmd: c3725 set_mac_addr ESW5 c202.3bbc.0000 
+Aug 28 02:40:22.994 HYPERVISOR: exec_cmd: vm set_nvram ESW5 256 
+Aug 28 02:40:22.995 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:40:22.996 HYPERVISOR: exec_cmd: vm slot_add_binding ESW5 1 0 NM-16ESW 
+Aug 28 02:40:24.257 HYPERVISOR: exec_cmd: nio create_udp udp-342b9486-f037-419a-86d9-0a884b5df867 10006 127.0.0.1 10007 
+Aug 28 02:40:24.506 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW5 1 0 udp-342b9486-f037-419a-86d9-0a884b5df867 
+Aug 28 02:40:24.508 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:40:26.437 HYPERVISOR: exec_cmd: nio create_udp udp-9fe52956-df50-43d3-a80e-26e2928b73d6 10036 127.0.0.1 10037 
+Aug 28 02:40:26.440 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW5 1 1 udp-9fe52956-df50-43d3-a80e-26e2928b73d6 
+Aug 28 02:40:26.441 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:40:33.680 HYPERVISOR: exec_cmd: vm set_ghost_status ESW5 2 
+Aug 28 02:40:33.682 HYPERVISOR: exec_cmd: vm set_ghost_file ESW5 /home/daniel/SegundoSemestre2022/Redes1/Proyecto1/Redes/Proyecto 1/Topologia_2/Topo2_Ok/project-files/dynamips/c3725-adventerprisek9-mz124-15.image-128.ghost 
+Aug 28 02:40:33.682 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:40:33.684 HYPERVISOR: exec_cmd: vm set_config ESW5 configs/i2_startup-config.cfg 
+Aug 28 02:40:33.685 HYPERVISOR: exec_cmd: vm start ESW5 
+Aug 28 02:41:33.964 HYPERVISOR: exec_cmd: vm extract_config ESW5 
+Aug 28 02:41:33.977 HYPERVISOR: exec_cmd: vm extract_config ESW5 
+Aug 28 02:43:00.592 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:43:00.594 HYPERVISOR: exec_cmd: vm stop ESW5 
+Aug 28 02:43:00.747 VM: VM ESW5 shutdown.
+Aug 28 02:43:00.754 HYPERVISOR: exec_cmd: vm extract_config ESW5 
+Aug 28 02:43:05.199 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:43:05.202 HYPERVISOR: exec_cmd: vm extract_config ESW5 
+Aug 28 02:43:05.596 HYPERVISOR: exec_cmd: vm get_status ESW5 
+Aug 28 02:43:05.596 HYPERVISOR: exec_cmd: vm extract_config ESW5 
+Aug 28 02:43:05.598 HYPERVISOR: exec_cmd: vm delete ESW5 
+Aug 28 02:43:05.599 VM: VM ESW5 destroyed.
+Aug 28 02:43:05.601 HYPERVISOR: exec_cmd: hypervisor stop 
+Aug 28 02:43:05.690 HYPERVISOR: Stopped.
+Aug 28 02:43:05.690 GENERAL: reset done.
