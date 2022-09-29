@@ -49,6 +49,7 @@ exit
 interface serial 2/1
 ip address 172.72.0.1 255.255.0.0
 no shutdown
+copy run start
 ```
 
 ## Comandos Router #2
@@ -62,6 +63,7 @@ exit
 interface serial 2/2
 ip address 172.73.0.1 255.255.0.0
 no shutdown
+copy run start
 ```
 
 ## Comandos Router #3
@@ -75,5 +77,6 @@ exit
 interface serial 2/2
 ip address 172.73.0.2 255.255.0.0
 no shutdown
+copy run start
 ```
 
