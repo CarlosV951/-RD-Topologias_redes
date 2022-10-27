@@ -13,6 +13,49 @@
 
 ##
 
+## Configuracion de los server
+
+##
+| Paso  | Descripcion | Comando / Imagen | 
+| ------ | ------ | ------ | 
+| 1 | Creacion de la maquina virtual de los servicios, se conecto con el adaptador de red virtual para ser utilizado posteriormente con gns3. | ![image](https://user-images.githubusercontent.com/57165427/186697536-e4c97cbe-14aa-4852-b659-328e352d207e.png) | 
+| 2 | Creacion de la maquina virtual de servidor de dns, se conecto con el adaptador de red virtual para ser utilizado posteriormente con gns3.  | ![image](https://user-images.githubusercontent.com/57165427/186698609-56eb95aa-7ed0-4118-a818-422fd05694ec.png) | 
+| 3 | Instalacion de ubuntu en las maquinas virtuales.  | ![image](https://user-images.githubusercontent.com/57165427/186699578-3c6b68e5-d987-457a-b4ab-d28e3561be3d.png) | 
+| 4 | Actualizamos paquetes en ubuntu  | ![image](https://user-images.githubusercontent.com/57165427/186700181-cc913da4-20c2-4991-b001-9081f3f01efc.png) | 
+| 5 | Instalamos net stat para utilizar ifconfig  | ![image](https://user-images.githubusercontent.com/57165427/186700547-00c8ccd1-b24d-4d2e-b3f9-d1bc100642d5.png) |
+
+## Iniciar el servidor de backend
+```sh
+
+pm2 start server.js
+
+```
+
+## Configuracion del servidor DNS
+```sh
+
+# sudo apt update
+# sudo apt upgrade
+# sudo apt install bind9 bind9-utils nano
+# systemctl status bind9
+# sudo ufw allow bind9
+# sudo nano /etc/bind/named.conf.options
+# sudo nano /etc/default/named
+# sudo named-checkconf
+# sudo systemctl restart bind9
+# systemctl status bind9
+# sudo nano /etc/bind/named.conf.local
+# sudo mkdir /etc/bind/zonas
+# sudo nano /etc/bind/zonas/db.networld.cu
+# sudo nano /etc/bind/zonas/db.10.10.20
+# sudo named-checkzone networld.cu /etc/bind/zonas/db.networld.cu
+# sudo named-checkzone db.20.10.10.in-addr.arpa /etc/bind/zonas/db.10.10.20
+# sudo systemctl restart bind9
+ping www.servicios.redes
+
+
+```
+
 
 ## Configuracion de las VLAN
 ##
