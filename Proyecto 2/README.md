@@ -75,37 +75,32 @@ End
 copy running-config startup-config
 ```
 
-## Asignarle ip a las interfaces
+## Asignarle ip a las interfaces vlan
 ## ESW2
 ```sh
 Conf t
-Int fa1/2
-ip address 192.168.35.16 255.255.255.240
+Int vlan 10
+ip address 192.168.35.17 255.255.255.240
+no shutdown
 exit
 
 Conf t
-Int fa1/1
-ip address 192.168.35.32 255.255.255.240
+Int vlan 20
+ip address 192.168.35.36 255.255.255.240
+no shutdown
 exit
 
 Conf t
-Int fa1/4
-ip address 192.168.35.48 255.255.255.240
+Int vlan 30
+ip address 192.168.35.49 255.255.255.240
+no shutdown
 exit
 
-Conf t
-Int fa1/5
-ip address 192.168.35.48 255.255.255.240
-exit
 
 Conf t
-Int fa1/6
-ip address 192.168.35.48 255.255.255.240
-exit
-
-Conf t
-Int fa1/3
-ip address 192.168.35.64 255.255.255.240
+Int vlan 40
+ip address 192.168.35.65 255.255.255.240
+no shutdown
 exit
 
 do write
@@ -113,12 +108,14 @@ copy running-config startup-config
 ```
 
 ## Configuracion del etherswitch hacia router
-## ES"
+## ESW2
 ```sh
 conf t
 
 int fa 1/0
-ip address 192.168.35.1 255.255.255.240
+no switchport
+ip address 192.168.35.2 255.255.255.240
+no shutdown
 exit
 
 do write
@@ -131,7 +128,8 @@ copy running-config startup-config
 conf t
 
 int fa 0/0
-ip address 192.168.35.0
+ip address 192.168.35.1 255.255.255.240
+no shutdown
 exit
 
 do write
