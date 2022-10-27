@@ -27,6 +27,30 @@ do write
 copy running-config startup-config
 ```
 
+## Configuracion de las VLAN
+##
+## ESW2
+```sh
+conf t 
+vlan 10
+name RHUMANOS
+exit
+
+vlan 20
+name CONTABILIDAD
+exit
+
+vlan 30
+name VENTAS
+exit
+
+vlan 40
+name INFORMATICA
+exit
+
+end
+```
+
 ## Configuracion del modo access
 ## ESW2
 ```sh
