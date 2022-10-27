@@ -13,19 +13,6 @@
 
 ##
 
-## Configuracion del modo truncal
-## ESW2
-```sh
-conf t
-
-int fa 1/0
-switchport mode trunk
-switchport trunk allowed vlan 1,10,20,30,40,1002-1006
-exit
-
-do write
-copy running-config startup-config
-```
 
 ## Configuracion de las VLAN
 ##
