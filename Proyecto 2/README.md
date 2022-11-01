@@ -292,8 +292,38 @@ end
 copy running-config startup-config
 ```
 
+## Configuracion del DHCP por vlan
 
+```sh
+interface fastEthernet 0/0.10
+ip dhcp pool diez
+network 192.168.34.0 255.255.255.224
+default-router 192.168.34.1
+exit
+do write
 
+interface fastEthernet 0/0.20
+ip dhcp pool veinte
+network 192.168.34.48 255.255.255.240
+default-router 192.168.34.49
+exit
+do write
+
+interface fastEthernet 0/0.30
+ip dhcp pool treinta
+network 192.168.34.128 255.255.255.128
+default-router 192.168.34.129
+exit
+do write
+
+interface fastEthernet 0/0.40
+ip dhcp pool cuarenta
+network 192.168.34.64 255.255.255.192
+default-router 192.168.34.65
+exit
+do write
+
+```
 
 ## Topologia 3
 
