@@ -20,8 +20,8 @@
 ```sh
 conf t
 int f1/0
-ip address 10.3.0.1 255.255.255.248
-standby 0 ip 10.3.0.3
+ip address 10.3.0.12 255.255.255.248
+standby 0 ip 10.3.0.14
 standby priority 100
 do write
 end
@@ -34,8 +34,8 @@ copy run start
 ```sh
 conf t
 int f1/0
-ip address 10.3.0.2 255.255.255.248
-standby 0 ip 10.3.0.3
+ip address 10.3.0.13 255.255.255.248
+standby 0 ip 10.3.0.14
 standby priority 99
 do write
 end
