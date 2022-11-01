@@ -21,8 +21,8 @@
 ```sh
 conf t
 int f1/0
-ip address 10.3.0.12 255.255.255.248
-standby 0 ip 10.3.0.14
+ip address 10.3.0.1 255.255.255.240
+standby 0 ip 10.3.0.3
 standby priority 100
 do write
 end
@@ -35,8 +35,8 @@ copy run start
 ```sh
 conf t
 int f1/0
-ip address 10.3.0.13 255.255.255.248
-standby 0 ip 10.3.0.14
+ip address 10.3.0.2 255.255.255.240
+standby 0 ip 10.3.0.3
 standby priority 99
 do write
 end
@@ -51,8 +51,8 @@ copy run start
 ```sh
 conf t
 int f1/0
-ip address 10.3.0.9 255.255.255.248
-glbp 10 ip 10.3.0.11
+ip address 10.3.0.4 255.255.255.240
+glbp 10 ip 10.3.0.6
 glbp 10 preempt
 glbp 10 priority 250
 glbp 10 timers 5 18
@@ -70,8 +70,8 @@ copy run start
 ```sh
 conf t
 int f1/0
-ip address 10.3.0.10 255.255.255.248
-glbp 10 ip 10.3.0.11
+ip address 10.3.0.5 255.255.255.240
+glbp 10 ip 10.3.0.6
 glbp 10 preempt
 glbp 10 priority 249
 glbp 10 timers 5 18
