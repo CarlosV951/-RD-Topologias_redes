@@ -7,6 +7,89 @@
 | Oscar Augusto Perez Tzunun | 201213498 |
 | Daniel Enrique Santos Godoy | 201325512 |
 
+
+
+## Topologia 1
+
+![image](https://user-images.githubusercontent.com/57165427/199159611-5a8e81ae-10ab-467c-a75d-fec6fdcd241a.png)
+
+## Configuracion del HSRP
+
+## R4
+
+```sh
+conf t
+int f1/0
+ip address 10.3.0.1 255.255.255.248
+standby 0 ip 10.3.0.3
+standby priority 100
+do write
+end
+copy run start
+
+```
+
+## R5
+
+```sh
+conf t
+int f1/0
+ip address 10.3.0.2 255.255.255.248
+standby 0 ip 10.3.0.3
+standby priority 99
+do write
+end
+copy run start
+
+```
+
+## Configuracion del GLBP
+
+## R3
+
+```sh
+conf t
+int f1/0
+ip address 10.3.0.9 255.255.255.248
+glbp 10 ip 10.3.0.11
+glbp 10 preempt
+glbp 10 priority 250
+glbp 10 timers 5 18
+glbp 10 load-balancing host-dependent
+no shut
+exit
+do write
+end
+copy run start
+
+```
+
+## R2
+
+```sh
+conf t
+int f1/0
+ip address 10.3.0.10 255.255.255.248
+glbp 10 ip 10.3.0.11
+glbp 10 preempt
+glbp 10 priority 250
+glbp 10 timers 5 18
+glbp 10 load-balancing host-dependent
+no shut
+exit
+do write
+end
+copy run start
+
+```
+
+## Topologia 2
+
+
+
+
+
+
 ## Topologia 3
 
 ![image](https://user-images.githubusercontent.com/57165427/198360753-3ba30131-d46c-48a0-826d-660c025be167.png)
