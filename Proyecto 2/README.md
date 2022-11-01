@@ -11,7 +11,8 @@
 
 ## Topologia 1
 
-![image](https://user-images.githubusercontent.com/57165427/199159611-5a8e81ae-10ab-467c-a75d-fec6fdcd241a.png)
+![image](https://user-images.githubusercontent.com/57165427/199163094-178934eb-f55e-4833-8045-5fd54e1b1396.png)
+
 
 ## Configuracion del HSRP
 
