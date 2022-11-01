@@ -196,7 +196,101 @@ copy run start
 
 ## Topologia 2
 
+![image](https://user-images.githubusercontent.com/57165427/199316110-eb7d90ae-46f9-4b82-85e9-4bf661e74c7b.png)
 
+
+## Configuracion de las VLAN
+##
+## ESW1
+```sh
+conf t 
+vlan 10
+name RHUMANOS
+exit
+
+vlan 20
+name CONTABILIDAD
+exit
+
+vlan 30
+name VENTAS
+exit
+
+vlan 40
+name INFORMATICA
+exit
+do write
+
+end
+```
+
+
+## Modo troncal
+## ESW1
+```sh
+conf t
+int f 1/0
+switchport trunk encapsulation dot1q
+switchport mode trunk
+spanning-tree portfast trunk
+exit
+
+int f 1/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+spanning-tree portfast trunk
+
+exit
+int f 1/2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+spanning-tree portfast trunk
+
+do write
+end
+copy running-config startup-config
+```
+
+## Configuracion del router hacia etherswitch
+## R6
+```sh
+conf t
+
+int f 0/0
+no shutdown
+exit
+
+int fastEthernet 0/0.10
+encapsulation  dot1Q 10
+ip address 192.168.34.1 255.255.255.224
+no shut
+do write
+exit
+
+int fastEthernet 0/0.20
+encapsulation  dot1Q 20
+ip address 192.168.34.49 255.255.255.240
+no shut
+do write
+exit
+
+int fastEthernet 0/0.30
+encapsulation  dot1Q 30
+ip address 192.168.34.129 255.255.255.128
+no shut
+do write
+exit
+
+int fastEthernet 0/0.40
+encapsulation  dot1Q 40
+ip address 192.168.34.65 255.255.255.192
+no shut
+do write
+exit
+end
+
+copy running-config startup-config
+```
 
 
 
@@ -336,28 +430,28 @@ no shutdown
 exit
 
 int fastEthernet 0/0.10
-encapsulation trunk dot1Q 10
+encapsulation dot1Q 10
 ip address 192.168.35.17 255.255.255.240
 no shut
 do write
 exit
 
 int fastEthernet 0/0.20
-encapsulation trunk dot1Q 20
+encapsulation  dot1Q 20
 ip address 192.168.35.33 255.255.255.240
 no shut
 do write
 exit
 
 int fastEthernet 0/0.30
-encapsulation trunk dot1Q 30
+encapsulation  dot1Q 30
 ip address 192.168.35.49 255.255.255.240
 no shut
 do write
 exit
 
 int fastEthernet 0/0.40
-encapsulation trunk dot1Q 40
+encapsulation  dot1Q 40
 ip address 192.168.35.65 255.255.255.240
 no shut
 do write
