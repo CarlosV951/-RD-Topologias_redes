@@ -72,7 +72,7 @@ int f1/0
 ip address 10.3.0.10 255.255.255.248
 glbp 10 ip 10.3.0.11
 glbp 10 preempt
-glbp 10 priority 250
+glbp 10 priority 249
 glbp 10 timers 5 18
 glbp 10 load-balancing host-dependent
 no shut
