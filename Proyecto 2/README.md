@@ -11,7 +11,7 @@
 
 ## Topologia 1
 
-![image](https://user-images.githubusercontent.com/57165427/199163094-178934eb-f55e-4833-8045-5fd54e1b1396.png)
+![image](https://user-images.githubusercontent.com/57165427/199291552-5e0cf2b3-f430-449e-b6e3-59fe2e4b62cb.png)
 
 
 ## Configuracion del HSRP
@@ -83,6 +83,116 @@ end
 copy run start
 
 ```
+
+## Configuracion de las interfaces
+
+## R4
+
+```sh
+conf t
+int f1/1
+ip address 10.3.0.49 255.255.255.240
+no shut
+do write
+end
+copy run start
+
+```
+
+## R5
+
+```sh
+conf t
+int f1/1
+ip address 10.3.0.65 255.255.255.240
+no shut
+do write
+end
+copy run start
+
+```
+
+## R3
+
+```sh
+conf t
+int f1/1
+ip address 10.3.0.17 255.255.255.240
+no shut
+exit
+do write
+end
+copy run start
+
+```
+
+## R2
+
+```sh
+conf t
+int f1/1
+ip address 10.3.0.33 255.255.255.240
+no shut
+exit
+do write
+end
+copy run start
+
+```
+
+## Ruteo estatico
+
+## R4
+
+```sh
+conf t
+conf t
+ip route 10.3.0.16 255.255.255.240 10.3.0.6
+ip route 10.3.0.32 255.255.255.240 10.3.0.6
+do write
+end
+copy run start
+
+```
+
+## R5
+
+```sh
+conf t
+conf t
+ip route 10.3.0.16 255.255.255.240 10.3.0.6
+ip route 10.3.0.32 255.255.255.240 10.3.0.6
+do write
+end
+copy run start
+
+```
+
+## R3
+
+```sh
+conf t
+ip route 10.3.0.48 255.255.255.240 10.3.0.3
+ip route 10.3.0.64 255.255.255.240 10.3.0.3
+do write
+end
+copy run start
+
+```
+
+## R2
+
+```sh
+conf t
+ip route 10.3.0.48 255.255.255.240 10.3.0.3
+ip route 10.3.0.64 255.255.255.240 10.3.0.3
+do write
+end
+copy run start
+
+```
+
+
 
 ## Topologia 2
 
