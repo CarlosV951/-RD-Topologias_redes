@@ -178,6 +178,24 @@
                 "x": 491,
                 "y": -303,
                 "z": 2
+            },
+            {
+                "drawing_id": "567fc669-8d73-4902-b5fd-7d3764bd8a0f",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"92\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.3.0.66/28</text></svg>",
+                "x": -96,
+                "y": 129,
+                "z": 2
+            },
+            {
+                "drawing_id": "3b05a0c9-4312-4274-b9e4-86013ce3df01",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg height=\"24\" width=\"92\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.3.0.50/28</text></svg>",
+                "x": -103,
+                "y": -54,
+                "z": 2
             }
         ],
         "links": [
@@ -433,6 +451,102 @@
                         },
                         "node_id": "ddc735b7-5506-46d6-9bfa-b0e6ce148be1",
                         "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "1d4b2865-cc27-4d48-bfcc-354a2270c275",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 68,
+                            "y": 12
+                        },
+                        "node_id": "d499fbed-1334-4e65-8181-ce1f68b0ace7",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e1",
+                            "x": 0,
+                            "y": 32
+                        },
+                        "node_id": "4a36b6b4-2e2e-4970-bf7a-d3fef90812f3",
+                        "port_number": 1
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "6be44e54-cafa-469b-af82-e9f7a0cb24a1",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "UDP tunnel 1",
+                            "x": 58,
+                            "y": -49
+                        },
+                        "node_id": "f3c1a9ba-25fc-45eb-aa52-8f72c6858ec9",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f1/0",
+                            "x": -1,
+                            "y": 41
+                        },
+                        "node_id": "f18a4a77-b542-4447-9f25-9993c9a35567",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "db708892-0c3e-47fb-b50f-5ce0eca02c47",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "UDP tunnel 1",
+                            "x": 59,
+                            "y": 78
+                        },
+                        "node_id": "af120221-94a1-472b-989f-0b020a9cc73b",
+                        "port_number": 3
+                    },
+                    {
+                        "adapter_number": 1,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f1/1",
+                            "x": -3,
+                            "y": 4
+                        },
+                        "node_id": "f18a4a77-b542-4447-9f25-9993c9a35567",
+                        "port_number": 1
                     }
                 ],
                 "suspend": false
@@ -793,6 +907,14 @@
                             "name": "Conexi\u00f3n de \u00e1rea local 2",
                             "port_number": 2,
                             "type": "ethernet"
+                        },
+                        {
+                            "lport": 20000,
+                            "name": "UDP tunnel 1",
+                            "port_number": 3,
+                            "rhost": "10.8.0.4",
+                            "rport": 30000,
+                            "type": "udp"
                         }
                     ],
                     "remote_console_host": "",
@@ -929,6 +1051,14 @@
                             "name": "Conexi\u00f3n de \u00e1rea local 2",
                             "port_number": 2,
                             "type": "ethernet"
+                        },
+                        {
+                            "lport": 22000,
+                            "name": "UDP tunnel 1",
+                            "port_number": 3,
+                            "rhost": "10.8.0.4",
+                            "rport": 29000,
+                            "type": "udp"
                         }
                     ],
                     "remote_console_host": "",
@@ -1137,7 +1267,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5016,
                 "console_auto_start": false,
                 "console_type": "none",
                 "custom_adapters": [],
@@ -1218,7 +1348,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5001,
+                "console": 5018,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1227,12 +1357,12 @@
                 "label": {
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                    "text": "ESW1",
+                    "text": "ESW2",
                     "x": 3,
                     "y": -25
                 },
                 "locked": false,
-                "name": "ESW1",
+                "name": "ESW2",
                 "node_id": "ddc735b7-5506-46d6-9bfa-b0e6ce148be1",
                 "node_type": "dynamips",
                 "port_name_format": "Ethernet{0}",
@@ -1275,7 +1405,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5002,
+                "console": 5020,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -1328,6 +1458,115 @@
                 "width": 66,
                 "x": 5,
                 "y": 31,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": 5022,
+                "console_auto_start": false,
+                "console_type": "none",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 32,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "Switch2",
+                    "x": 6,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "Switch2",
+                "node_id": "4a36b6b4-2e2e-4970-bf7a-d3fef90812f3",
+                "node_type": "ethernet_switch",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "ports_mapping": [
+                        {
+                            "name": "Ethernet0",
+                            "port_number": 0,
+                            "type": "access",
+                            "vlan": 1
+                        },
+                        {
+                            "name": "Ethernet1",
+                            "port_number": 1,
+                            "type": "access",
+                            "vlan": 1
+                        },
+                        {
+                            "name": "Ethernet2",
+                            "port_number": 2,
+                            "type": "access",
+                            "vlan": 1
+                        },
+                        {
+                            "name": "Ethernet3",
+                            "port_number": 3,
+                            "type": "access",
+                            "vlan": 1
+                        },
+                        {
+                            "name": "Ethernet4",
+                            "port_number": 4,
+                            "type": "access",
+                            "vlan": 1
+                        },
+                        {
+                            "name": "Ethernet5",
+                            "port_number": 5,
+                            "type": "access",
+                            "vlan": 1
+                        },
+                        {
+                            "name": "Ethernet6",
+                            "port_number": 6,
+                            "type": "access",
+                            "vlan": 1
+                        },
+                        {
+                            "name": "Ethernet7",
+                            "port_number": 7,
+                            "type": "access",
+                            "vlan": 1
+                        }
+                    ]
+                },
+                "symbol": ":/symbols/ethernet_switch.svg",
+                "template_id": "1966b864-93e7-32d5-965f-001384eec461",
+                "width": 72,
+                "x": -631,
+                "y": 205,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": 5024,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "PC9",
+                    "x": -37,
+                    "y": 56
+                },
+                "locked": false,
+                "name": "PC9",
+                "node_id": "d499fbed-1334-4e65-8181-ce1f68b0ace7",
+                "node_type": "vpcs",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {},
+                "symbol": ":/symbols/vpcs_guest.svg",
+                "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
+                "width": 65,
+                "x": -621,
+                "y": 275,
                 "z": 1
             }
         ]
